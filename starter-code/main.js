@@ -5,7 +5,7 @@ var cardTwo = "queen"
 var cardThree = "king"
 var cardFour = "king"
 
-if (cardOne === cardTwo || cardThree === cardFour){
+/*if (cardOne === cardTwo || cardThree === cardFour){
 alert("You found a match!");
 } else if (cardOne === cardThree){
 	alert("Sorry, try again.");
@@ -15,5 +15,17 @@ alert("You found a match!");
 	alert("Sorry, try again.");
 } else if(cardTwo === cardFour){
 	alert("Sorry, try again.");
+}*/
+
+var createCards = function () {
+var gameItem = document.getElementById("game-board");
+for (var i=1; i < 5; i++) {
+	var cardsOnly = document.createElement("div"); 
+	cardsOnly.className = "card";
+	gameItem.appendChild(cardsOnly);
 }
+}
+
+addEventListener("load", createCards);
+
 
